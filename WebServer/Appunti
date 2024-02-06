@@ -1,0 +1,18 @@
+test plan con diversi threadgroup, ognuno con un numero diverso di thread che richiedono le stesse risorse dal server. Fare 3 misurazioni per ogni prova, per 4 CTT diversi -> 1000, 2000, 3000 e 4000 (CTT totale tra tutti i thread group)
+
+
+il fair throughput è CTT / 60 (perchè CTT è req/min, il fair throughput è req/s)
+
+3 threadgroup con rispettivamente 30, 15 e 5 thread.
+
+		   thread group		
+		
+		5	15	30
+	-------------------------------	
+	1000 |	100	300	600
+   C	     |	
+   T	2000 |	200	600	1200
+   T	     |
+	3000 |	300	900	1800
+	     |
+	4000 |	400	1200	2400
