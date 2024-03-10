@@ -21,6 +21,6 @@ print(R_sistema)
 
 R_star = (1-(1-R_Terminal)**2)*(1-(1-R_Bus)**2)*(1-(1-R_Bus)**2)*(1-(1-R_INS)*(1-R_Doppler*(1-(1-R_AHRS)**3)))
 
-C = (1-np.sqrt(1-0.99999/R_star))/R_CPU
+C = ((0.99999/R_star) - R_CPU)/((1-R_CPU)*R_CPU)
 
 print(C)
